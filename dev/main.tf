@@ -5,7 +5,7 @@ terraform {
     organization = "nlgordon"
 
     workspaces {
-      name = "testing-local-dev"
+      name = "dev"
     }
   }
 }
@@ -16,6 +16,6 @@ provider "aws" {
 }
 
 module "infrastructure" {
-  source = "./infrastructure"
-  environment = "local-dev"
+  source = "../infrastructure"
+  environment = "dev"
 }
